@@ -1,0 +1,30 @@
+api_version = "2025-04"
+
+[[extensions]]
+name = "t:name"
+handle = "cheaper-product-discount"
+type = "function"
+uid = "9a3ff08f-70a9-f7e8-f33e-b015c1449d54eb22baed"
+description = "t:description"
+
+  [[extensions.targeting]]
+  target = "cart.lines.discounts.generate.run"
+  input_query = "src/cart_lines_discounts_generate_run.graphql"
+  export = "cart-lines-discounts-generate-run"
+
+  [[extensions.targeting]]
+  target = "cart.delivery-options.discounts.generate.run"
+  input_query = "src/cart_delivery_options_discounts_generate_run.graphql"
+  export = "cart-delivery-options-discounts-generate-run"
+
+  [extensions.build]
+  command = ""
+  path = "dist/function.wasm"
+
+[extensions.input.variables]
+namespace = "$app:example-discounts--ui-extension"
+key = "function-configuration"
+
+[extensions.ui.paths]
+create = "/app/discount/:functionId/new"
+details = "/app/discount/:functionId/:id"
