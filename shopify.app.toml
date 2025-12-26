@@ -1,6 +1,6 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "c9965f0bbb9936d4b24be2bfe5da808f"
+client_id = "d12365156e9f66ab90e4ba48131456c4"
 name = "cheaper-product-discount"
 application_url = "https://cheaper-product-discount-app.onrender.com"
 embedded = true
