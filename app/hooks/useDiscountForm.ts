@@ -48,6 +48,8 @@ export function useDiscountForm({ initialData }: UseDiscountFormOptions = {}) {
       return {
         ...initialData,
         usageLimit: initialData.usageLimit?.toString() ?? "",
+        bulkPrefix: initialData.bulkPrefix ?? initialData.configuration?.bulkPrefix ?? "Castaner",
+        bulkQuantity: initialData.bulkQuantity ?? initialData.configuration?.bulkQuantity?.toString() ?? "5",
         // Ensure mapping is correct
         discountClasses: [DiscountClass.Product],
         startDate: new Date(initialData.startsAt),
@@ -74,6 +76,8 @@ export function useDiscountForm({ initialData }: UseDiscountFormOptions = {}) {
       discountClasses: [DiscountClass.Product],
       usageLimit: "",
       appliesOncePerCustomer: false,
+      bulkPrefix: "Castaner",
+      bulkQuantity: "5",
       startDate: new Date(),
       endDate: null,
       configuration: {
