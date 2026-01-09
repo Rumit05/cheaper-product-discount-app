@@ -2,7 +2,7 @@
 
 client_id = "d12365156e9f66ab90e4ba48131456c4"
 name = "cheaper-product-discount"
-application_url = "https://consolidation-steve-lucky-headed.trycloudflare.com"
+application_url = "https://cheaper-product-discount-app.onrender.com"
 embedded = true
 
 [build]
@@ -24,4 +24,4 @@ api_version = "2026-01"
 scopes = "write_products,write_discounts,read_discounts,read_products"
 
 [auth]
-redirect_urls = [ "https://consolidation-steve-lucky-headed.trycloudflare.com/api/auth" ]
+redirect_urls = [ "https://cheaper-product-discount-app.onrender.com/api/auth" ]
